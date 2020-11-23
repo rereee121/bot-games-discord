@@ -28,7 +28,7 @@ client.on("ready", () => {
   console.log(`${client.users.size} Members`);
   console.log(`${client.channels.size} Channels`);
   console.log(`[ ${client.guilds.map(g => g.name).join(", \n ")} ]`);
-  client.user.setActivity(`${stat}`, { type: "streaming" });
+  client.user.setActivity(`Your Bot Name`, { type: "streaming" });
 });
 /////////////////////|
 
@@ -37,9 +37,15 @@ const stat = process.env.STATUS;
 
 ////////////////////|
 
+/*
+
+- [       All Copy Right Reserved For: Shuruhatik  in YT     ] -
+
+*/
+
 //var fs = require("fs"); // fs Package //
 let prefixes = JSON.parse(fs.readFileSync("./prefix.json", "utf8"));
-const dol = "NAJMOU DEVELOPMENT";
+const dol = "بوت برعاية موقع شروحاتك";
 client.on("message", message => {
   if (!message.channel.guild) return;
   if (message.author.bot) return;
@@ -49,7 +55,7 @@ client.on("message", message => {
     };
   var prefix = prefixes[message.guild.id].prefix;
   var setp = prefixes[message.guild.id];
-  if (message.content.startsWith(prefix + "setp")) {
+  if (message.content.startsWith(prefix + "setprefix")) {
     if (!message.member.hasPermission(`MANAGE_GUILD`))
       return message.reply(
         `**:x: Error: You do not have the required permissions: Manage Server.**`
@@ -129,7 +135,7 @@ client.on("message", message => {
       );
     };
     message.channel.send("**لديك __15__ ثانيه لتفكيك الكلمه**").then(msg => {
-      const w = ["./img.png"]; //الخلفيه
+      const w = ["./shuruhatik.png"]; //الخلفيه
       let Image = Canvas.Image,
         canvas = new Canvas(400, 150),
         ctx = canvas.getContext("2d");
@@ -231,7 +237,7 @@ client.on("message", message => {
       );
     };
     message.channel.send("**لديك __15__ ثانيه لحل هذه اللغز**").then(msg => {
-      const w = ["./img.png"]; //الخلفيه
+      const w = ["./shuruhatik.png"]; //الخلفيه
       let Image = Canvas.Image,
         canvas = new Canvas(400, 150),
         ctx = canvas.getContext("2d");
@@ -331,7 +337,7 @@ client.on("message", message => {
       );
     };
     message.channel.send("**لديك __15__ ثانيه لتركيب الكلمه**").then(msg => {
-      const w = ["./img.png"]; //الخلفيه
+      const w = ["./shuruhatik.png"]; //الخلفيه
       let Image = Canvas.Image,
         canvas = new Canvas(400, 150),
         ctx = canvas.getContext("2d");
@@ -433,7 +439,7 @@ client.on("message", message => {
     message.channel
       .send("** لديك __15__ ثانيه لكتابه هذه الكلمه بسرعة**")
       .then(msg => {
-        const w = ["./img.png"]; //الخلفيه
+        const w = ["./shuruhatik.png"]; //الخلفيه
         let Image = Canvas.Image,
           canvas = new Canvas(400, 150),
           ctx = canvas.getContext("2d");
@@ -537,7 +543,7 @@ client.on("message", message => {
       );
     };
     message.channel.send("**لديك __15__ ثانيه لحل المسئله**").then(msg => {
-      const w = ["./img.png"]; //الخلفيه
+      const w = ["./shuruhatik.png"]; //الخلفيه
       let Image = Canvas.Image,
         canvas = new Canvas(400, 150),
         ctx = canvas.getContext("2d");
@@ -642,7 +648,7 @@ client.on("message", message => {
       );
     };
     message.channel.send("**لديك __15__ لمعرفة العاصمه**").then(msg => {
-      const w = ["./img.png"]; //الخلفيه
+      const w = ["./shuruhatik.png"]; //الخلفيه
       let Image = Canvas.Image,
         canvas = new Canvas(400, 150),
         ctx = canvas.getContext("2d");
@@ -727,9 +733,11 @@ client.on("message", message => {
       "https://cdn.discordapp.com/attachments/756329106953601225/776584216161812490/jW4dnFtA_400x400.png",
       "https://cdn.discordapp.com/attachments/756329106953601225/776589087997296691/InCS8dvy_400x400.png",
       "https://cdn.discordapp.com/attachments/756329106953601225/776590445622329344/ocZKRu9P_400x400.png",
+      "https://cdn.salla.sa/ZqADP/HVXiTyTKtcbn9sOhe7feE1NxKsDMkZ4BeiJFjiwu.jpeg",
+      "https://kgo.googleusercontent.com/profile_vrt_raw_bytes_1587515358_10512.png",
       "https://cdn.discordapp.com/attachments/756329106953601225/776591027943243776/aCWlGSZF_400x400.png"
     ];
-    var x2 = ["جافا", "ريزر", "يوتيوب", "جوجل كروم"];
+    var x2 = ["جافا", "جوجل","ابل","ريزر", "يوتيوب", "جوجل كروم"];
     var x3 = Math.floor(Math.random() * x.length);
     var brand = new Discord.RichEmbed()
       .setImage(`${x[x3]}`)
@@ -805,6 +813,7 @@ fs.writeFile("./Database/prefix.json", JSON.stringify(prefixes), err => {
   if (err) console.error(err);
 });
 
+
 const cuttweet = [
   "كت تويت ‏| تخيّل لو أنك سترسم شيء وحيد فيصبح حقيقة، ماذا سترسم؟",
   "كت تويت | أكثر شيء يُسكِت الطفل برأيك؟",
@@ -874,11 +883,12 @@ client.on("message", message => {
     message.content == prefix + "emoji" ||
     message.content == prefix + "ايموجي"
   ) {
-    var x = ["🌚", "😂", "🥶", "😷", "🌻", "🌗", "✨", "🍐", "🚗", "💽"];
-    var x2 = ["🌚", "😂", "🥶", "😷", "🌻", "🌗", "✨", "🍐", "🚗", "💽"];
+    var x = ["🌚", "😂", "🥶", "😷", "🌻", "🌗", "✨", "🍐", "🚗", "💽", "🍔"];
+    var x2 = ["🌚", "😂", "🥶", "😷", "🌻", "🌗", "✨", "🍐", "🚗", "💽", "🍔"];
     var x3 = Math.floor(Math.random() * x.length);
     var emoji = new Discord.RichEmbed()
       .setTitle(`** لديك __10 ثواني__ لكتابة الايموجي **`)
+      .setColor("AQUA")
       .addField(`${x[x3]}`);
     message.channel.sendEmbed(emoji).then(msg1 => {
       var r = message.channel.awaitMessages(msg => msg.content == x2[x3], {
@@ -896,7 +906,7 @@ client.on("message", message => {
         message.channel.send(
           `${
             collected.first().author
-          } ** لقد قمت بكتابة الايموجي في الوقت المناسب `
+          } ** لقد قمت بكتابة الايموجي في الوقت المناسب ** ✅`
         );
       });
     });
@@ -930,7 +940,11 @@ client.on("message", message => {
       .join("\n");
     const prefixlor = new Discord.RichEmbed()
       .setTitle("Leaderboard")
+      .setThumbnail(client.user.avatarURL)
+      .setColor("AQUA")
       .setAuthor(client.user.username, client.user.avatarURL)
+      .setTimestamp()
+      .setFooter(`Requested By | ${message.author.username}`)
       .setDescription(top, true);
 
     message.channel.sendEmbed(prefixlor);
@@ -1185,6 +1199,12 @@ fs.writeFile("./Database/prefix.json", JSON.stringify(prefixes), err => {
   if (err) console.error(err);
 });
 
+/*
+
+- [       All Copy Right Reserved For: Shuruhatik  in YT     ] -
+
+*/
+
 const Sra7a = [
   "صراحه  |  صوتك حلوة؟",
   "صراحه  |  التقيت الناس مع وجوهين؟",
@@ -1266,9 +1286,10 @@ client.on("message", message => {
       return message.reply("** This command only for servers **");
     var client = new Discord.RichEmbed()
       .setTitle("لعبة صراحة ..")
+      .setColor("AQUA")
       .setDescription(`${Sra7a[Math.floor(Math.random() * Sra7a.length)]}`)
       .setImage(
-        "https://cdn.discordapp.com/attachments/371269161470525444/384103927060234242/125.png"
+        "https://sarahah.pro/assets/img/logo.png"
       )
       .setTimestamp();
 
@@ -1311,7 +1332,7 @@ client.on("message", message => {
 
         r.then(collected => {
           message.channel.send(
-            `${collected.first().author} ** لقد قمت بكتابة الايموجي في الوقت المناسب **`
+            `${collected.first().author} ** لقد قمت بكتابة الكلمة في الوقت المناسب ** ✅`
           );
     
         });
@@ -1321,6 +1342,64 @@ client.on("message", message => {
 fs.writeFile("./Database/prefix.json", JSON.stringify(prefixes), err => {
   if (err) console.error(err);
 });
+
+/*
+
+- [       All Copy Right Reserved For: Shuruhatik  in YT     ] -
+
+*/
+
+ const kingmas = [
+    '** منشن الجميع وقل انا اكرهكم. **',
+ '** اتصل على امك و قول لها انك تحبها :heart:. **',
+    '**     تصل على الوالده  و تقول لها  احب وحده.**',
+    '** صور اي شيء يطلبه منك الاعبين.***',
+    '** اكتب في الشات اي شيء يطلبه منك الاعبين في الخاص. **',
+    '** اتصل على احد من اخوياك  خوياتك , و اطلب منهم مبلغ على اساس انك صدمت بسيارتك.**',
+    '** اعطي اي احد جنبك كف اذا مافيه احد جنبك اعطي نفسك و نبي نسمع صوت الكف.**',
+    '**  تروح عند شخص تقول له احبك. **',
+    '**روح عند اي احد بالخاص و قول له انك تحبه و الخ.**',
+    '** اذهب الى واحد ماتعرفه وقل له انا كيوت وابي بوسه. **',
+    '** روح الى اي قروب عندك في الواتس اب و اكتب اي شيء يطلبه منك الاعبين  الحد الاقصى 3 رسائل. **',
+    '*** اذا انت ولد اكسر اغلى او احسن عطور عندك اذا انتي بنت اكسري الروج حقك او الميك اب حقك. **',
+    '** ذي المرة لك لا تعيدها.**',
+    '** ارمي جوالك على الارض بقوة و اذا انكسر صور الجوال و ارسله في الشات العام.**',
+    '** اتصل على ابوك و قول له انك رحت مع بنت و احين هي حامل..... **',
+    '** تكلم باللهجة السودانية الين يجي دورك مرة ثانية.**',
+    '**سو مشهد تمثيلي عن مصرية بتولد.**',
+    '** قول نكتة اذا و لازم احد الاعبين يضحك اذا محد ضحك يعطونك ميوت الى ان يجي دورك مرة ثانية. **',
+    '** قول نكتة اذا و لازم احد الاعبين يضحك اذا محد ضحك يعطونك ميوت الى ان يجي دورك مرة ثانية.*',
+    '** سامحتك خلاص مافيه عقاب لك :slight_smile:. **',
+    '** اذهب الى واحد ماتعرفه وقل له انا كيوت وابي بوسه.**',
+    '** تتصل على الوالده  و تقول لها خطفت شخص. **',
+    '** روح اكل ملح + ليمون اذا مافيه اكل اي شيء من اختيار الي معك.  **'
+ ]
+  client.on('message', message => {
+    if(message.content === prefix + '3kab' || message.content === prefix + 'عقاب') {
+   var mariam= new Discord.RichEmbed()
+   .setTitle("لعبة العقاب ..")
+   .setColor('AQUA')
+   .setDescription(`${kingmas[Math.floor(Math.random() * kingmas.length)]}`)
+    message.channel.sendEmbed(mariam);
+    message.react(":thinking:")
+   }
+ });
+
+
+/*
+
+- [       All Copy Right Reserved For: Shuruhatik  in YT     ] -
+
+*/
+
+client.on('message', message => {
+        if(message.content.startsWith(prefix + 'hypixel')) {
+            let args = message.content.split(' ').slice(1).join(' ');
+            if (!args) return message.channel.send("**برجاء تحديد اسمك بماين كرافت بعد الامر ❕*");
+            var link = (`https://plancke.io/hypixel/player/stats/${args}`);
+            message.channel.send(link);
+        }
+    });  
 
 client.on("message", message => {
   if (!prefixes[message.guild.id])
@@ -1333,57 +1412,71 @@ client.on("message", message => {
   if (message.content === prefix + "help") {
     let embed = new Discord.RichEmbed()
 
-      .setColor("GREEN")
+      .setColor("AQUA")
+      .setThumbnail(client.user.avatarURL)
+      .setTitle("Commands 📌")
       .setDescription(
-        `**~~=~~ Bot Orders | أوامر البوت ~~=~~
----------------------------------
-🎮 - ${prefix}fkk - فكك
+        `**
+✯・ ${prefix}fkk - فكك
 
-🎮 - ${prefix}rkb - ركب
+✯・ ${prefix}rkb - ركب
 
-🎮 - ${prefix}fast - اسرع
+✯・ ${prefix}fast - اسرع
 
-🎮 - ${prefix}math - رياضيات
+✯・ ${prefix}math - رياضيات
 
-🎮 - ${prefix}puzzle - لغز
+✯・ ${prefix}puzzle - لغز
 
-🎮 - ${prefix}xo
+✯・ ${prefix}xo
 
-🎮 - ${prefix}rps
+✯・ ${prefix}hypixel
 
-🎮 - ${prefix}capitals - عواصم
+✯・ ${prefix}rps
 
-🎮 - ${prefix}brand - شعار
+✯・ ${prefix}capitals - عواصم
 
-🎮 - ${prefix}emoji - ايموجي
+✯・ ${prefix}brand - شعار
 
-🎮 - ${prefix}flag - اعلام
+✯・ ${prefix}emoji - ايموجي
 
-🎮 - ${prefix}cut - كت
+✯・ ${prefix}flag - اعلام
 
-🎮 - ${prefix}8ball
+✯・ ${prefix}cut - كت
 
-🎮 - ${prefix}frots - فواكه
+✯・ ${prefix}3kab - عقاب
 
-🎮 - ${prefix}sara7a - صراحه
+✯・ ${prefix}8ball
 
-🎮 - ${prefix}tanslation - ترجمه
+✯・ ${prefix}frots - فواكه
 
-🛠️ - ${prefix}top - توب
+✯・ ${prefix}sara7a - صراحه
 
-🛠️ - ${prefix}points - نقاطي
+✯・ ${prefix}tanslation - ترجمه
 
-🛠️ - ${prefix}ping
+⚘・ ${prefix}top - توب
 
-🛠️ - ${prefix}setp
----------------------------------**`
+⚘・ ${prefix}points - نقاطي
+
+⚘・ ${prefix}ping
+
+⚘・ ${prefix}setprefix
+**`
       )
-      .setFooter(`${dol}`);
+    .setFooter(`Requested By | ${message.author.username}`);
     message.reply({ embed: embed });
+      message.react('✅')
   }
 });
 fs.writeFile("./Database/prefix.json", JSON.stringify(prefixes), err => {
   if (err) console.error(err);
 });
+
+
+/*
+
+- [       All Copy Right Reserved For: Shuruhatik  in YT     ] -
+
+*/
+
 
 client.login(process.env.token);
