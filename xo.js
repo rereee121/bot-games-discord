@@ -84,6 +84,12 @@ module.exports = (client, message, new_message, player1_id, player2_id, turn_id,
   })
 
 
+/*
+
+- [       All Copy Right Reserved For: Shuruhatik  in YT     ] -
+
+*/
+
   // Function for toggling players
   function toggle_player(turn_id, player1_id, player2_id) {
     let player_switched;
@@ -164,3 +170,9 @@ module.exports = (client, message, new_message, player1_id, player2_id, turn_id,
     }
   }
 }
+
+/*
+
+- [       All Copy Right Reserved For: Shuruhatik  in YT     ] -
+
+*/
